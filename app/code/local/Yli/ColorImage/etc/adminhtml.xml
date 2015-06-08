@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<config>
+    <menu>
+       <catalog>
+       <children>
+           <attributes>
+              <children>
+                  <colorimage translate="title" module="colorimage">
+                      <title>Color Image</title>
+                      <action>colorimage/adminhtml_image/</action>
+                      <depends><module>Mage_Catalog</module></depends>
+                  </colorimage>
+              </children>
+           </attributes>
+           </children>
+        </catalog>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <attributes>
+                        <children>
+                            <colorimage translate="title" module="colorimage">
+                                <title>Color Image</title>
+                            </colorimage>
+                        </children>
+                    </attributes>
+                </children>
+            </admin>
+        </resources>
+     </acl>
+</config>
