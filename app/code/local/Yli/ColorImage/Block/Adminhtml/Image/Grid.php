@@ -27,6 +27,7 @@ class Yli_ColorImage_Block_Adminhtml_Image_Grid extends Mage_Adminhtml_Block_Wid
             'align' =>'left',
             'width' => '50px',
             'index' => 'option_id',
+            'renderer'  =>  'colorimage/catalog_attribute_renderer_color'
         ));
         
         $this->addColumn('image', array(
@@ -34,6 +35,7 @@ class Yli_ColorImage_Block_Adminhtml_Image_Grid extends Mage_Adminhtml_Block_Wid
             'align' =>'left',
             'width' => '50px',
             'index' => 'image',
+            'renderer'  =>  'colorimage/catalog_attribute_renderer_image'
         )); 
         return parent::_prepareColumns();
     }
