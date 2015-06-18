@@ -13,8 +13,10 @@ class Yli_ColorImage_Block_Adminhtml_Image_Grid extends Mage_Adminhtml_Block_Wid
     
      protected function _prepareCollection()
     {
+        $attributeId = Mage::getResourceModel('eav/entity_attribute')
+        ->getIdByCode('catalog_product', 'color');
         $collection = Mage::getModel('eav/entity_attribute_option')->getCollection()
-                      ->addFieldToFilter('attribute_id',92);
+                      ->addFieldToFilter('attribute_id',$attributeId);
         $collection->getSelect()->joinLeft(array('colors' => $collection->getTable('colorimage/image')),"main_table.option_id = colors.color");
         $this->setCollection($collection);
         return parent::_prepareCollection();
